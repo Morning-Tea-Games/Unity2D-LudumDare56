@@ -41,6 +41,7 @@ public class DragObject : MonoBehaviour
         if (isDragging)
         {
             _rigidbody.MovePosition(_input.GlobalMousePosition + (Vector3)offset);
+            _rigidbody.velocity = Vector2.zero;
         }
     }
 
