@@ -1,4 +1,3 @@
-using Entities;
 using ServiceLocatorSystem;
 using Services;
 using UnityEngine;
@@ -10,10 +9,10 @@ namespace GameData
         public static ServiceLocator ServiceLocator;
 
         [SerializeField]
-        private Player _player;
+        private PlayerMovementService _movement;
 
         [SerializeField]
-        private PlayerMovementService _movement;
+        private GroundCheckService _groundCheck;
 
         [SerializeField]
         private InputService _input;
@@ -24,8 +23,10 @@ namespace GameData
 
             // Register services
             ServiceLocator.Register(new TransformMovementService());
+            ServiceLocator.Register(new RigidbodyJumpService());
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
+            ServiceLocator.Register(_groundCheck);
         }
 
         private void OnDestroy()

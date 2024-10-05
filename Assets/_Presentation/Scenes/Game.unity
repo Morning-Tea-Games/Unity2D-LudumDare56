@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 242211802}
   - component: {fileID: 242211801}
   - component: {fileID: 242211800}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 532177721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &453611796
@@ -459,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 5
-  <JumpForce>k__BackingField: 5
+  <JumpForce>k__BackingField: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +598,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &532177719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532177721}
+  - component: {fileID: 532177720}
+  m_Layer: 0
+  m_Name: GroundCheckService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &532177720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532177719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c5c523ece43914b85529510cc50ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drawGizmos: 1
+  _collider: {fileID: 453611797}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _overlapCircleRadius: 0.1
+--- !u!4 &532177721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532177719}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 453611795}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,8 +759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 766f70c87f1a61d46baeca9925add163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 453611798}
   _movement: {fileID: 429267605}
+  _groundCheck: {fileID: 532177720}
   _input: {fileID: 1164471888}
 --- !u!4 &676102709
 Transform:
@@ -737,7 +788,7 @@ GameObject:
   - component: {fileID: 1164471887}
   - component: {fileID: 1164471888}
   m_Layer: 0
-  m_Name: InputListener
+  m_Name: InputService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,10 +825,10 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 453611795}
+  - {fileID: 242211802}
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 242211802}
   - {fileID: 1164471887}
   - {fileID: 429267606}
-  - {fileID: 453611795}
   - {fileID: 676102709}
