@@ -1,15 +1,16 @@
+using GameData;
+using Services;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
     Transform target;
+    private InputService _input;
 
-    private Camera cam;
-
-    private void Awake()
+    private void Start()
     {
-        cam = Camera.main;
+        _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
     }
 
     private void LateUpdate()
@@ -17,8 +18,7 @@ public class CameraController : MonoBehaviour
         var targetPosition = target.position;
         var distance = Vector3.Distance(transform.position, targetPosition);
         var scaleFactor = Mathf.Clamp01(1 / (distance + 1));
-        var mouseWorldPosition = cam.ScreenToWorldPoint(Input.mousePosition);
         transform.position =
-            targetPosition + (mouseWorldPosition - transform.position) * scaleFactor;
+            targetPosition + (_input.GlobalMousePosition - transform.position) * scaleFactor;
     }
 }
