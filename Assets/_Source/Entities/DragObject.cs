@@ -2,68 +2,72 @@ using GameData;
 using Services;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class DragObject : MonoBehaviour
+namespace Entities
 {
-    private Rigidbody2D _rigidbody;
-    private Camera mainCamera;
-
-    private Vector2 offset;
-    private bool isDragging = false;
-
-    private InputService _input;
-
-    private void OnValidate()
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class DragObject : MonoBehaviour
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-    }
+        [SerializeField]
+        private Rigidbody2D _rigidbody;
+        private Camera _mainCamera;
 
-    private void Awake()
-    {
-        mainCamera = Camera.main;
-    }
+        private Vector2 _offset;
+        private bool _isDragging = false;
 
-    private void Start()
-    {
-        _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
-        _input.OnMouseDown += OnMouseDown;
-        _input.OnMouseUp += OnMouseUp;
-    }
+        private InputService _input;
 
-    private void OnDestroy()
-    {
-        _input.OnMouseDown -= OnMouseDown;
-        _input.OnMouseUp -= OnMouseUp;
-    }
-
-    private void Update()
-    {
-        if (isDragging)
+        private void OnValidate()
         {
-            _rigidbody.MovePosition(_input.GlobalMousePosition + (Vector3)offset);
-            _rigidbody.velocity = Vector2.zero;
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
-    }
 
-    private void OnMouseDown()
-    {
-        if (IsMouseOver())
+        private void Awake()
         {
-            isDragging = true;
-            Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            offset = (Vector2)transform.position - mousePosition;
+            _mainCamera = Camera.main;
         }
-    }
 
-    private void OnMouseUp()
-    {
-        isDragging = false;
-    }
+        private void Start()
+        {
+            _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
+            _input.OnMouseDown += OnMouseDown;
+            _input.OnMouseUp += OnMouseUp;
+        }
 
-    private bool IsMouseOver()
-    {
-        Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
-        return hit.collider != null && hit.collider.gameObject == gameObject;
+        private void OnDestroy()
+        {
+            _input.OnMouseDown -= OnMouseDown;
+            _input.OnMouseUp -= OnMouseUp;
+        }
+
+        private void Update()
+        {
+            if (_isDragging)
+            {
+                _rigidbody.MovePosition(_input.GlobalMousePosition + (Vector3)_offset);
+                _rigidbody.velocity = Vector2.zero;
+            }
+        }
+
+        private void OnMouseDown()
+        {
+            if (IsMouseOver())
+            {
+                _isDragging = true;
+                Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                _offset = (Vector2)transform.position - mousePosition;
+            }
+        }
+
+        private void OnMouseUp()
+        {
+            _isDragging = false;
+        }
+
+        private bool IsMouseOver()
+        {
+            Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+            return hit.collider != null && hit.collider.gameObject == gameObject;
+        }
     }
 }
