@@ -9,6 +9,9 @@ namespace GameData
         public static ServiceLocator ServiceLocator;
 
         [SerializeField]
+        private Transform _playerTransform;
+
+        [SerializeField]
         private PlayerMovementService _movement;
 
         [SerializeField]
@@ -24,6 +27,7 @@ namespace GameData
             // Register services
             ServiceLocator.Register(new TransformMovementService());
             ServiceLocator.Register(new RigidbodyJumpService());
+            ServiceLocator.Register(new PlayerTransformService(_playerTransform));
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
             ServiceLocator.Register(_groundCheck);

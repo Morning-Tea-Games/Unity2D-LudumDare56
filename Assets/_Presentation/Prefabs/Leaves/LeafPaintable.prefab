@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 7975572216918198484}
   - component: {fileID: 313690163208490890}
   - component: {fileID: 8695012768123386254}
-  - component: {fileID: 154081863794378930}
   - component: {fileID: 709559696219321784}
-  - component: {fileID: 7554325310523815451}
+  - component: {fileID: 3342030120211596142}
   m_Layer: 0
-  m_Name: Leaf
+  m_Name: LeafPaintable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 673481358383797987}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.688, y: -10.672, z: 0}
-  m_LocalScale: {x: 1.8378358, y: 2.9405375, z: 1.8378358}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 3, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -130,29 +129,17 @@ HingeJoint2D:
   m_BreakForce: 500
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 0
+  m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.49}
-  m_ConnectedAnchor: {x: 0.37287605, y: 0.2689086}
+  m_ConnectedAnchor: {x: 0, y: 1.47}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -383.66388
-    m_UpperAngle: 23.920425
---- !u!114 &154081863794378930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673481358383797987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0683d3b96ece24682df5f15ee9a7a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+    m_LowerAngle: -37.3914
+    m_UpperAngle: 34.13501
 --- !u!70 &709559696219321784
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,7 +175,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000001, y: 1.0000001}
   m_Direction: 0
---- !u!114 &7554325310523815451
+--- !u!114 &3342030120211596142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,6 +184,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 673481358383797987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b33cf40f8013d248a7a75fb08521248, type: 3}
+  m_Script: {fileID: 11500000, guid: e4b30160f61084d49a0ae2767cca1252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defaultColor: {r: 0.42352942, g: 0.8117647, b: 0.44313726, a: 1}
+  _newColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  _spriteRenderer: {fileID: 7975572216918198484}
