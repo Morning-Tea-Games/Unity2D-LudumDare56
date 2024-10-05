@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;
+    [SerializeField]
+    Transform target;
 
     private Camera cam;
 
