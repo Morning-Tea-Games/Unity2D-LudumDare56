@@ -19,6 +19,7 @@ namespace ServiceLocatorSystem
             if (_services.ContainsKey(key))
             {
                 UnityEngine.Debug.LogError($"Service {nameof(key)} already registered");
+                return;
             }
 
             _services.Add(key, service);
@@ -31,6 +32,7 @@ namespace ServiceLocatorSystem
             if (!_services.ContainsKey(key))
             {
                 UnityEngine.Debug.LogError($"Service {key} not registered");
+                return;
             }
 
             _services.Remove(key);
@@ -43,6 +45,7 @@ namespace ServiceLocatorSystem
             if (!_services.ContainsKey(key))
             {
                 UnityEngine.Debug.LogError($"Service {key} not registered");
+                return default;
             }
 
             return (T)_services[key];
