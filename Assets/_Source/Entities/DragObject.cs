@@ -1,39 +1,50 @@
+using GameData;
+using Services;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class DragObject : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Rigidbody2D _rigidbody;
     private Camera mainCamera;
 
     private Vector2 offset;
     private bool isDragging = false;
 
+    private InputService _input;
+
+    private void OnValidate()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
+    }
+
+    private void Start()
+    {
+        _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
+        _input.OnMouseDown += OnMouseDown;
+        _input.OnMouseUp += OnMouseUp;
+    }
+
+    private void OnDestroy()
+    {
+        _input.OnMouseDown -= OnMouseDown;
+        _input.OnMouseUp -= OnMouseUp;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            OnMouseDown();
-        }
-
         if (isDragging)
         {
-            Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            rb.MovePosition(mousePosition + offset);
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            isDragging = false;
+            _rigidbody.MovePosition(_input.GlobalMousePosition + (Vector3)offset);
         }
     }
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         if (IsMouseOver())
         {
@@ -41,6 +52,11 @@ public class DragObject : MonoBehaviour
             Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             offset = (Vector2)transform.position - mousePosition;
         }
+    }
+
+    private void OnMouseUp()
+    {
+        isDragging = false;
     }
 
     private bool IsMouseOver()
