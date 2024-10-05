@@ -5,7 +5,10 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField]
-    Transform target;
+    Transform _target;
+
+    [SerializeField]
+    private float _smoothTime;
     private InputService _input;
 
     private void Start()
@@ -15,10 +18,13 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        var targetPosition = target.position;
+        var targetPosition = _target.position;
         var distance = Vector3.Distance(transform.position, targetPosition);
         var scaleFactor = Mathf.Clamp01(1 / (distance + 1));
-        transform.position =
+        var desiredPosition =
             targetPosition + (_input.GlobalMousePosition - transform.position) * scaleFactor;
+
+        transform.position +=
+            (_smoothTime * (desiredPosition - transform.position) / 100) * Time.deltaTime;
     }
 }
