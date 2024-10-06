@@ -56,7 +56,7 @@ namespace Entities
         {
             if (!_canTeleport || _isTeleporting)
                 return;
-            Debug.Log("Вызов анимации");
+            Debug.Log("Invoke animation");
             StartCoroutine(AnimateRoutine());
         }
 
