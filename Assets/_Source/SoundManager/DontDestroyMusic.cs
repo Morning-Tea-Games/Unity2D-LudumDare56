@@ -1,22 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroyMusic : MonoBehaviour
+namespace SoundManager
 {
-    public static DontDestroyMusic Instance { get; private set; }
-
-    private void Awake()
+    public class DontDestroyMusic : MonoBehaviour
     {
-        if (Instance)
+        public static DontDestroyMusic Instance { get; private set; }
+
+        private void Awake()
         {
-            Destroy(gameObject);
-            return;
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (Instance)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            else
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
         }
     }
 }
