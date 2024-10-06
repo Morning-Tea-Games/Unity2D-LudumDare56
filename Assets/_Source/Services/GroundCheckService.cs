@@ -1,53 +1,56 @@
 using ServiceLocatorSystem;
 using UnityEngine;
 
-public class GroundCheckService : MonoBehaviour, IService
+namespace Services
 {
-    [SerializeField]
-    private bool _drawGizmos;
-
-    [SerializeField]
-    private Collider2D _collider;
-
-    [SerializeField]
-    private LayerMask _groundLayer;
-
-    [SerializeField]
-    private float _overlapCircleRadius;
-
-    private Vector2 _overlapCirclePosition;
-
-    public bool IsGrounded()
+    public class GroundCheckService : MonoBehaviour, IService
     {
-        _overlapCirclePosition = new Vector2(
-            transform.position.x,
-            transform.position.y - _collider.bounds.extents.y
-        );
-        var colliders = Physics2D.OverlapCircleAll(
-            _overlapCirclePosition,
-            _overlapCircleRadius,
-            _groundLayer
-        );
+        [SerializeField]
+        private bool _drawGizmos;
 
-        foreach (var collider in colliders)
+        [SerializeField]
+        private Collider2D _collider;
+
+        [SerializeField]
+        private LayerMask _groundLayer;
+
+        [SerializeField]
+        private float _overlapCircleRadius;
+
+        private Vector2 _overlapCirclePosition;
+
+        public bool IsGrounded()
         {
-            if ((_groundLayer & 1 << collider.gameObject.layer) != 0)
+            _overlapCirclePosition = new Vector2(
+                transform.position.x,
+                transform.position.y - _collider.bounds.extents.y
+            );
+            var colliders = Physics2D.OverlapCircleAll(
+                _overlapCirclePosition,
+                _overlapCircleRadius,
+                _groundLayer
+            );
+
+            foreach (var collider in colliders)
             {
-                return true;
+                if ((_groundLayer & 1 << collider.gameObject.layer) != 0)
+                {
+                    return true;
+                }
             }
+
+            return false;
         }
 
-        return false;
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (!_drawGizmos)
+        private void OnDrawGizmos()
         {
-            return;
-        }
+            if (!_drawGizmos)
+            {
+                return;
+            }
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(_overlapCirclePosition, _overlapCircleRadius);
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(_overlapCirclePosition, _overlapCircleRadius);
+        }
     }
 }
