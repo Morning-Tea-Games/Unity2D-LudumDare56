@@ -132,7 +132,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.49}
-  m_ConnectedAnchor: {x: 0, y: 1.47}
+  m_ConnectedAnchor: {x: 12.422964, y: -24.105825}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   _drawGizmos: 1
   _jumps: 3
   _hingeJoint2D: {fileID: 8695012768123386254}
-  _activeRadius: 7
+  _activeRadius: 10
 --- !u!114 &4548184238485970039
 MonoBehaviour:
   m_ObjectHideFlags: 0
