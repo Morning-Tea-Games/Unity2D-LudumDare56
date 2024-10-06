@@ -16,6 +16,12 @@ namespace Services
 
         private void Update()
         {
+            if (!Enabled)
+            {
+                MoveDirection = Vector3.zero;
+                return;
+            }
+
             ReadMovement();
             ReadJump();
             ReadMousePosition();
