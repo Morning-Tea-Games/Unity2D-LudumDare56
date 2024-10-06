@@ -6,7 +6,7 @@ public class SoundManager : MonoBehaviour
     public Slider Slider;
     private AudioSource _audioSource;
 
-    private void Awake()
+    private void Start()
     {
         _audioSource = DontDestroyMusic.Instance.GetComponent<AudioSource>();
         Slider.value = _audioSource.volume;
