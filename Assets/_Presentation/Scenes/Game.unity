@@ -858,16 +858,17 @@ MonoBehaviour:
   _groundCheck: {fileID: 532177720}
   _input: {fileID: 1164471888}
   _rightBranchesPrefabs:
-  - {fileID: 6759915500211633034, guid: 4a1afdccf293904428239ef843b41e09, type: 3}
-  - {fileID: 6759915500211633034, guid: 72abbf75483010c4b90d7b1a3b134735, type: 3}
-  - {fileID: 6759915500211633034, guid: c2c62f03f64b4a64a8efa23c30f4019e, type: 3}
-  - {fileID: 6759915500211633034, guid: 9427e1dd27a0f3846ac78e52b233cb1b, type: 3}
-  - {fileID: 6759915500211633034, guid: 1555cf1342ff7174f86219d7e276bf6e, type: 3}
-  - {fileID: 6759915500211633034, guid: f90e4d3db8a7d4242acb15ec1d44212b, type: 3}
-  - {fileID: 8351646457558799464, guid: b6a8ed37e327dc642b8a6676eda0c32f, type: 3}
+  - {fileID: 8351646457558799464, guid: 28d6b14184d65174b9231a67de01e0fd, type: 3}
+  - {fileID: 8498539859371756201, guid: d8439c27bf9473f4494f827c5aa871ab, type: 3}
+  - {fileID: 8498539859371756201, guid: 7761f365f1f3bfd4282742a2f6598bb2, type: 3}
   _leftBranchesPrefabs:
   - {fileID: 4073817181872497654, guid: 9cf1c9f0ef12d584da536063a348238f, type: 3}
+  - {fileID: 8351646457558799464, guid: e30edc699d7d1d84584c2d8e864d042c, type: 3}
+  - {fileID: 4073817181872497654, guid: ee2c6aaaef777ba428d6245ed9314c45, type: 3}
   _groups:
+  - {fileID: 1495967386}
+  - {fileID: 947737551}
+  - {fileID: 2012198716}
   - {fileID: 92964395}
   _trunkPrefab: {fileID: 6145600552165347143, guid: 6b6e7b190b32b9744b5bf299a17d562f, type: 3}
 --- !u!4 &676102709
