@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Entities;
 using ServiceLocatorSystem;
 using Services;
 using UnityEngine;
@@ -20,6 +22,12 @@ namespace GameData
         [SerializeField]
         private InputService _input;
 
+        [SerializeField]
+        private List<GameObject> _branchesPrefabs;
+
+        [SerializeField]
+        private Trunk _trunk;
+
         private void Awake()
         {
             ServiceLocator = new ServiceLocator();
@@ -31,6 +39,18 @@ namespace GameData
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
             ServiceLocator.Register(_groundCheck);
+            ServiceLocator.Register(new LevelGeneratorService(_branchesPrefabs, _trunk));
+        }
+
+        private void Start()
+        {
+            var levelGenerator = ServiceLocator.GetService<LevelGeneratorService>();
+
+            for (int i = 0; i < 50; i++)
+            {
+                levelGenerator.GenerateTree();
+                levelGenerator.RiseTreeHigher();
+            }
         }
 
         private void OnDestroy()
