@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 7975572216918198484}
   - component: {fileID: 313690163208490890}
   - component: {fileID: 8695012768123386254}
+  - component: {fileID: 154081863794378930}
   - component: {fileID: 709559696219321784}
-  - component: {fileID: 6808398468187877073}
-  - component: {fileID: 4548184238485970039}
+  - component: {fileID: 7554325310523815451}
   m_Layer: 0
-  m_Name: LeafRotten
+  m_Name: YellowLeaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4433962, g: 0.31232014, b: 0.27816838, a: 1}
+  m_Color: {r: 0.6886792, g: 0.65601224, b: 0.41255784, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -127,20 +127,33 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: 500
+  m_BreakForce: 100
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.49}
-  m_ConnectedAnchor: {x: 0, y: 1.47}
+  m_ConnectedAnchor: {x: 0.37287605, y: 0.2689086}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -37.3914
-    m_UpperAngle: 34.13501
+    m_LowerAngle: -39.980507
+    m_UpperAngle: 38.68507
+--- !u!114 &154081863794378930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673481358383797987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0683d3b96ece24682df5f15ee9a7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 313690163208490890}
 --- !u!70 &709559696219321784
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,23 +189,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000001, y: 1.0000001}
   m_Direction: 0
---- !u!114 &6808398468187877073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 673481358383797987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d7a46e84789734c97fcfb324bc8ecd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _drawGizmos: 1
-  _jumps: 3
-  _hingeJoint2D: {fileID: 8695012768123386254}
-  _activeRadius: 7
---- !u!114 &4548184238485970039
+--- !u!114 &7554325310523815451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
