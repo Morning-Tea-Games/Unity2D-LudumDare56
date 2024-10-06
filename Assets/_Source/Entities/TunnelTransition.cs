@@ -1,3 +1,4 @@
+using Entities;
 using GameData;
 using Services;
 using UnityEngine;
@@ -10,19 +11,16 @@ public class TunnelTransition : MonoBehaviour
     [SerializeField]
     private Transform _destination;
 
-    private PlayerTransformService _playerTransformService;
+    [SerializeField]
+    private Player _player;
+
     private InputService _input;
 
     private bool _canTeleport;
-    private Transform _playerTransform;
 
     private void Start()
     {
-        _playerTransformService =
-            ServiceController_Game.ServiceLocator.GetService<PlayerTransformService>();
         _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
-
-        _playerTransform = _playerTransformService.GetPlayerTransform();
         _input.OnActivate += Activate;
     }
 
@@ -51,7 +49,7 @@ public class TunnelTransition : MonoBehaviour
     {
         if (_canTeleport)
         {
-            _playerTransform.position = _destination.position;
+            _player.transform.position = _destination.position;
         }
     }
 }
