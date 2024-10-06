@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbfc7d3a91851e944acdf709f82cfe28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minY: -50
+  _minY: -75
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,13 +858,9 @@ MonoBehaviour:
   _groundCheck: {fileID: 532177720}
   _input: {fileID: 1164471888}
   _rightBranchesPrefabs:
-  - {fileID: 8351646457558799464, guid: 28d6b14184d65174b9231a67de01e0fd, type: 3}
-  - {fileID: 8498539859371756201, guid: d8439c27bf9473f4494f827c5aa871ab, type: 3}
-  - {fileID: 8498539859371756201, guid: 7761f365f1f3bfd4282742a2f6598bb2, type: 3}
+  - {fileID: 4695440740679452413, guid: 042f16de538c73f459ed83131075d746, type: 3}
   _leftBranchesPrefabs:
-  - {fileID: 4073817181872497654, guid: 9cf1c9f0ef12d584da536063a348238f, type: 3}
-  - {fileID: 8351646457558799464, guid: e30edc699d7d1d84584c2d8e864d042c, type: 3}
-  - {fileID: 4073817181872497654, guid: ee2c6aaaef777ba428d6245ed9314c45, type: 3}
+  - {fileID: 9018663543723955557, guid: 95c0ef250916cbb498ae17ccd09a64f0, type: 3}
   _groups:
   - {fileID: 1495967386}
   - {fileID: 947737551}
