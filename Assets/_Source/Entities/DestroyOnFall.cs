@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class DestroyOnFall : MonoBehaviour
+namespace Entities
 {
-    [SerializeField]
-    private float _minY = -30f;
-
-    private void Update()
+    public class DestroyOnFall : MonoBehaviour
     {
-        if (transform.position.y <= _minY)
+        [SerializeField]
+        private float _minY = -30f;
+
+        private void Update()
         {
-            Destroy(gameObject);
+            if (transform.position.y <= _minY)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

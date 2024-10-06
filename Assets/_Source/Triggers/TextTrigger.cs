@@ -1,30 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class TextTrigger : MonoBehaviour
+namespace Triggers
 {
-    public TMP_Text _text;
-    public string[] textOptions;
-
-    void Start()
+    public class TextTrigger : MonoBehaviour
     {
-        _text.gameObject.SetActive(false);
-    }
+        public TMP_Text _text;
+        public string[] textOptions;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
+        void Start()
         {
-            _text.gameObject.SetActive(true);
-            _text.text = textOptions[Random.Range(0, textOptions.Length)];
+            _text.gameObject.SetActive(false);
         }
-    }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        _text.gameObject.SetActive(false);
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                _text.gameObject.SetActive(true);
+                _text.text = textOptions[Random.Range(0, textOptions.Length)];
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D other)
+        {
+            _text.gameObject.SetActive(false);
+        }
     }
 }
