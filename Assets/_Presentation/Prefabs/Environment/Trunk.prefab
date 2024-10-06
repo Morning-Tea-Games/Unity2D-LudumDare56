@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2640262060662926903
+--- !u!1 &3173962714273901647
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 459880835616877053}
+  - component: {fileID: 7100343353471887423}
   m_Layer: 3
   m_Name: BranchStart_2
   m_TagString: Untagged
@@ -16,16 +16,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &459880835616877053
+--- !u!4 &7100343353471887423
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2640262060662926903}
+  m_GameObject: {fileID: 3173962714273901647}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.700001, y: -4.8999996, z: 0}
+  m_LocalPosition: {x: 11.6, y: -5.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64,7 +64,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6942408706161136289}
-  - {fileID: 459880835616877053}
+  - {fileID: 7100343353471887423}
   - {fileID: 9069779482912903215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -177,11 +177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 137b9c957f899de4c8d5b0fe047acd7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Sr>k__BackingField: {fileID: 6596463284618630919}
-  _branchesStarts:
+  <SpriteRenderer>k__BackingField: {fileID: 6596463284618630919}
+  <LeftBranchesStarts>k__BackingField:
   - {fileID: 8256420513341687628}
-  - {fileID: 2640262060662926903}
   - {fileID: 8064409960091766792}
+  <RightBranchesStarts>k__BackingField:
+  - {fileID: 3173962714273901647}
 --- !u!1 &8064409960091766792
 GameObject:
   m_ObjectHideFlags: 0

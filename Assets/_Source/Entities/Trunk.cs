@@ -7,14 +7,17 @@ namespace Entities
     public class Trunk : MonoBehaviour
     {
         [field: SerializeField]
-        public SpriteRenderer Sr { get; private set; }
+        public SpriteRenderer SpriteRenderer { get; private set; }
 
-        [SerializeField]
-        private List<GameObject> _branchesStarts;
+        [field: SerializeField]
+        public List<GameObject> LeftBranchesStarts { get; private set; }
+
+        [field: SerializeField]
+        public List<GameObject> RightBranchesStarts { get; private set; }
 
         private void OnValidate()
         {
-            Sr = GetComponent<SpriteRenderer>();
+            SpriteRenderer = GetComponent<SpriteRenderer>();
         }
     }
 }

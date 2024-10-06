@@ -8,6 +8,8 @@ namespace GameData
 {
     public class ServiceController_Game : MonoBehaviour
     {
+        public const string ENVIRONMENT_GROUP_NAME = "---Environment---";
+
         public static ServiceLocator ServiceLocator;
 
         [SerializeField]
@@ -23,10 +25,16 @@ namespace GameData
         private InputService _input;
 
         [SerializeField]
-        private List<GameObject> _branchesPrefabs;
+        private List<GameObject> _rightBranchesPrefabs;
 
         [SerializeField]
-        private Trunk _trunk;
+        private List<GameObject> _leftBranchesPrefabs;
+
+        [SerializeField]
+        private List<Transform> _groups;
+
+        [SerializeField]
+        private Trunk _trunkPrefab;
 
         private void Awake()
         {
@@ -35,21 +43,26 @@ namespace GameData
             // Register services
             ServiceLocator.Register(new TransformMovementService());
             ServiceLocator.Register(new RigidbodyJumpService());
+            ServiceLocator.Register(new GroupHierarchyService(_groups));
             ServiceLocator.Register(new PlayerTransformService(_playerTransform));
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
             ServiceLocator.Register(_groundCheck);
-            ServiceLocator.Register(new LevelGeneratorService(_branchesPrefabs, _trunk));
+            ServiceLocator.Register(
+                new LevelGeneratorService(_leftBranchesPrefabs, _rightBranchesPrefabs, _trunkPrefab)
+            );
         }
 
         private void Start()
         {
             var levelGenerator = ServiceLocator.GetService<LevelGeneratorService>();
+            var groupHierarchy = ServiceLocator.GetService<GroupHierarchyService>();
 
             for (int i = 0; i < 50; i++)
             {
-                levelGenerator.GenerateTree();
+                var trunk = levelGenerator.GenerateTree();
                 levelGenerator.RiseTreeHigher();
+                trunk.transform.SetParent(groupHierarchy.GetGroup(ENVIRONMENT_GROUP_NAME));
             }
         }
 
