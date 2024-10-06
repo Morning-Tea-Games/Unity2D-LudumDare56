@@ -16,6 +16,9 @@ namespace GameData
         private Transform _playerTransform;
 
         [SerializeField]
+        private Animator _playerAnimator;
+
+        [SerializeField]
         private PlayerMovementService _movement;
 
         [SerializeField]
@@ -45,6 +48,7 @@ namespace GameData
             ServiceLocator.Register(new RigidbodyJumpService());
             ServiceLocator.Register(new GroupHierarchyService(_groups));
             ServiceLocator.Register(new PlayerTransformService(_playerTransform));
+            ServiceLocator.Register(new PlayerAnimationService(_playerAnimator));
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
             ServiceLocator.Register(_groundCheck);

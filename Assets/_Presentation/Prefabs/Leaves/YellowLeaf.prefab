@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 154081863794378930}
   - component: {fileID: 709559696219321784}
   - component: {fileID: 7554325310523815451}
+  - component: {fileID: 6406855113407204715}
   m_Layer: 0
   m_Name: YellowLeaf
   m_TagString: Untagged
@@ -129,7 +130,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: 400
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.8308338, y: -1.8145359}
   m_ConnectedAnchor: {x: 0.8308338, y: -1.8145359}
@@ -202,3 +203,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minY: -75
+--- !u!114 &6406855113407204715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673481358383797987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e90a6cbcb2614e449e686613ffe7f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
