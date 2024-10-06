@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c59543fdbd07d6642957a963adff0b49
+guid: 105198f195f78d240abb2d694cf0ac78
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,28 +106,15 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LeafSet_0
+      name: GreenToYellowSecond_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 5
+        x: 9
+        y: 4
         width: 39
         height: 66
       alignment: 0
@@ -137,18 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de76114766584ce438310f93a086e109
-      internalID: -765241430
+      spriteID: ba76c0e2004ea2647b54a09442da8e74
+      internalID: 266692192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeafSet_1
+      name: GreenToYellowSecond_1
       rect:
         serializedVersion: 2
-        x: 63
-        y: 5
+        x: 77
+        y: 4
         width: 39
         height: 66
       alignment: 0
@@ -158,18 +145,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f5d3659319c9fd47bf2a486b8bb0279
-      internalID: -1172640211
+      spriteID: b55816f1c5685604991cf9baf41a8001
+      internalID: -899835863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeafSet_2
+      name: GreenToYellowSecond_2
       rect:
         serializedVersion: 2
-        x: 120
-        y: 5
+        x: 140
+        y: 4
         width: 39
         height: 66
       alignment: 0
@@ -179,18 +166,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3cc653514c016b48ba7bdac155d8316
-      internalID: -1539367502
+      spriteID: 517a3d26714eed64da03f5453d4c2a79
+      internalID: -1157191852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LeafSet_3
+      name: GreenToYellowSecond_3
       rect:
         serializedVersion: 2
-        x: 175
-        y: 5
+        x: 204
+        y: 4
         width: 39
         height: 66
       alignment: 0
@@ -200,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae063d311d3ca3449be1b3c247e1873a
-      internalID: -123797086
+      spriteID: a07355028149b554aa294d387e6a0c88
+      internalID: 1588043519
       vertices: []
       indices: 
       edges: []
@@ -217,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LeafSet_0: -765241430
-      LeafSet_1: -1172640211
-      LeafSet_2: -1539367502
-      LeafSet_3: -123797086
+      GreenToYellowSecond_0: 266692192
+      GreenToYellowSecond_1: -899835863
+      GreenToYellowSecond_2: -1157191852
+      GreenToYellowSecond_3: 1588043519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
