@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 7975572216918198484}
   - component: {fileID: 313690163208490890}
   - component: {fileID: 8695012768123386254}
+  - component: {fileID: 154081863794378930}
   - component: {fileID: 709559696219321784}
-  - component: {fileID: 3342030120211596142}
+  - component: {fileID: 7554325310523815451}
   m_Layer: 0
-  m_Name: LeafPaintable
+  m_Name: YellowLeaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4247953, g: 0.8113208, b: 0.44118598, a: 1}
+  m_Color: {r: 0.6886792, g: 0.65601224, b: 0.41255784, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -126,20 +127,33 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: 500
+  m_BreakForce: 100
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.49}
-  m_ConnectedAnchor: {x: 0.08000752, y: 0.5784816}
+  m_ConnectedAnchor: {x: 0.37287605, y: 0.2689086}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -37.3914
-    m_UpperAngle: 34.13501
+    m_LowerAngle: -39.980507
+    m_UpperAngle: 38.68507
+--- !u!114 &154081863794378930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673481358383797987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0683d3b96ece24682df5f15ee9a7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rigidbody: {fileID: 313690163208490890}
 --- !u!70 &709559696219321784
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -175,7 +189,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.0000001, y: 1.0000001}
   m_Direction: 0
---- !u!114 &3342030120211596142
+--- !u!114 &7554325310523815451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,9 +198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 673481358383797987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b30160f61084d49a0ae2767cca1252, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b33cf40f8013d248a7a75fb08521248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultColor: {r: 0.42352942, g: 0.8117647, b: 0.44313726, a: 1}
-  _newColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  _spriteRenderer: {fileID: 7975572216918198484}
+  _minY: -30

@@ -42,7 +42,7 @@ namespace Entities
             var playerTransform = _playerTransform.GetPlayerTransform();
             var distance = Vector3.Distance(transform.position, playerTransform.position);
 
-            if (distance < _activeRadius)
+            if (distance < _activeRadius && playerTransform.position.y >= transform.position.y)
             {
                 _jumps--;
             }
