@@ -19,6 +19,8 @@ namespace Entities
 
         private Camera _mainCamera;
         private InputService _input;
+        private PlayerAnimationService _playerAnimation;
+        private SoundsControlService _soundsControl;
 
         private void OnValidate()
         {
@@ -29,7 +31,11 @@ namespace Entities
         {
             _spriteRenderer.color = _defaultColor;
             _mainCamera = Camera.main;
+            _soundsControl =
+                ServiceController_Game.ServiceLocator.GetService<SoundsControlService>();
             _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
+            _playerAnimation =
+                ServiceController_Game.ServiceLocator.GetService<PlayerAnimationService>();
             _input.OnMouseDown += OnMouseDown;
         }
 
@@ -46,6 +52,8 @@ namespace Entities
             }
 
             _spriteRenderer.color = _newColor;
+            _soundsControl.PlaySound("PaintLeaf");
+            _playerAnimation.SetState(PlayerStates.Paint); // TODO: Не работает
         }
 
         private bool IsMouseOver()

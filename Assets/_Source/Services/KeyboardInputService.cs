@@ -16,10 +16,17 @@ namespace Services
 
         private void Update()
         {
+            if (!Enabled)
+            {
+                MoveDirection = Vector3.zero;
+                return;
+            }
+
             ReadMovement();
             ReadJump();
             ReadMousePosition();
             ReadMousePress();
+            ReadActivate();
         }
 
         private void ReadMovement()
@@ -52,6 +59,14 @@ namespace Services
             else if (Input.GetMouseButtonUp(0))
             {
                 OnMouseUp?.Invoke();
+            }
+        }
+
+        private void ReadActivate()
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                OnActivate?.Invoke();
             }
         }
     }
