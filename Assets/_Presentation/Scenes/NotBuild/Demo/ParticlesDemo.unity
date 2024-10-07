@@ -387,7 +387,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textFixeld: {fileID: 281798413}
-  _interval: 1
 --- !u!4 &158592210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5294985055045125099, guid: 95c0ef250916cbb498ae17ccd09a64f0, type: 3}
@@ -2938,22 +2937,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System2
       objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 89b918adb3d76184c9620692b7304009, type: 3}
-      propertyPath: lengthInSec
-      value: 11.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 89b918adb3d76184c9620692b7304009, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 89b918adb3d76184c9620692b7304009, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263926379295062701, guid: 89b918adb3d76184c9620692b7304009, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3110,22 +3093,6 @@ PrefabInstance:
     - target: {fileID: 4474440901603211121, guid: 8538e1e6aa97c31419ed9f4b70a52a10, type: 3}
       propertyPath: m_Name
       value: Particle System4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 8538e1e6aa97c31419ed9f4b70a52a10, type: 3}
-      propertyPath: lengthInSec
-      value: 11.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 8538e1e6aa97c31419ed9f4b70a52a10, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 8538e1e6aa97c31419ed9f4b70a52a10, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263926379295062701, guid: 8538e1e6aa97c31419ed9f4b70a52a10, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3900,22 +3867,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System3
       objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 4d05ba34b07a3c94b87ad041a20825b8, type: 3}
-      propertyPath: lengthInSec
-      value: 11.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 4d05ba34b07a3c94b87ad041a20825b8, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: 4d05ba34b07a3c94b87ad041a20825b8, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263926379295062701, guid: 4d05ba34b07a3c94b87ad041a20825b8, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3977,22 +3928,6 @@ PrefabInstance:
     - target: {fileID: 4474440901603211121, guid: ae53e6e64df87494e92767ec5df4829f, type: 3}
       propertyPath: m_Name
       value: Particle System1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: ae53e6e64df87494e92767ec5df4829f, type: 3}
-      propertyPath: lengthInSec
-      value: 11.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: ae53e6e64df87494e92767ec5df4829f, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7738344201397935919, guid: ae53e6e64df87494e92767ec5df4829f, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8263926379295062701, guid: ae53e6e64df87494e92767ec5df4829f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
