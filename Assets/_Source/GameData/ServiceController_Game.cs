@@ -52,23 +52,24 @@ namespace GameData
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
             ServiceLocator.Register(_groundCheck);
-            ServiceLocator.Register(
-                new LevelGeneratorService(_leftBranchesPrefabs, _rightBranchesPrefabs, _trunkPrefab)
-            );
+            // ServiceLocator.Register(
+            //     new LevelGeneratorService(_leftBranchesPrefabs, _rightBranchesPrefabs, _trunkPrefab)
+            // );
         }
 
-        private void Start()
-        {
-            var levelGenerator = ServiceLocator.GetService<LevelGeneratorService>();
-            var groupHierarchy = ServiceLocator.GetService<GroupHierarchyService>();
+        // Map Generation (unused)
+        // private void Start()
+        // {
+        //     var levelGenerator = ServiceLocator.GetService<LevelGeneratorService>();
+        //     var groupHierarchy = ServiceLocator.GetService<GroupHierarchyService>();
 
-            for (int i = 0; i < 50; i++)
-            {
-                var trunk = levelGenerator.GenerateTree();
-                levelGenerator.RiseTreeHigher();
-                trunk.transform.SetParent(groupHierarchy.GetGroup(ENVIRONMENT_GROUP_NAME));
-            }
-        }
+        //     for (int i = 0; i < 50; i++)
+        //     {
+        //         var trunk = levelGenerator.GenerateTree();
+        //         levelGenerator.RiseTreeHigher();
+        //         trunk.transform.SetParent(groupHierarchy.GetGroup(ENVIRONMENT_GROUP_NAME));
+        //     }
+        // }
 
         private void OnDestroy()
         {
