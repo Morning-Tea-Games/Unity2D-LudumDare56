@@ -65,6 +65,7 @@ namespace Entities
             _soundsControl.PlaySound("PaintLeaf");
             _playerAnimation.SetState(PlayerStates.Paint); // TODO: Не работает
             StartCoroutine(AnimateRoutine());
+            gameObject.tag = "DoneLeaf";
             _isPainted = true;
         }
 
