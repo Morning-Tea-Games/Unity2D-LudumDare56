@@ -23,7 +23,7 @@ namespace Services
         public AudioSource PlaySound(string key)
         {
             var current = _audioSources[key];
-            current.volume = DontDestroyMusic.Instance.SoundVolume;
+            //current.volume = DontDestroyMusic.Instance.SoundVolume;
             current.Play();
             return current;
         }
