@@ -243,6 +243,8 @@ MonoBehaviour:
   _destination: {fileID: 3939297426173256739}
   _nextTunnel: {fileID: 0}
   _player: {fileID: 0}
+  _myBranch: {fileID: 0}
+  _noTransitionMessage: Service all the leaves in order to move on
 --- !u!1 &6126623016304005921
 GameObject:
   m_ObjectHideFlags: 0

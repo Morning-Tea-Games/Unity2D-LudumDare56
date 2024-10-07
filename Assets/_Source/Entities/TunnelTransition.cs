@@ -20,14 +20,22 @@ namespace Entities
         [SerializeField]
         private Player _player;
 
+        [SerializeField]
+        private Transform _myBranch;
+
+        [SerializeField]
+        private string _noTransitionMessage;
+
         private bool _canTeleport;
         private static bool _isTeleporting;
 
         private InputService _input;
+        private DialogueService _dialogue;
 
         private void Start()
         {
             _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
+            _dialogue = ServiceController_Game.ServiceLocator.GetService<DialogueService>();
             _input.OnActivate += Activate;
         }
 
@@ -56,6 +64,13 @@ namespace Entities
         {
             if (!_canTeleport || _isTeleporting)
                 return;
+
+            if (LeafOff("Leaf", _myBranch))
+            {
+                _dialogue.Display(_noTransitionMessage, 2f);
+                return;
+            }
+
             Debug.Log("Invoke animation");
             StartCoroutine(AnimateRoutine());
         }
@@ -111,6 +126,28 @@ namespace Entities
 
             _isTeleporting = false;
             Debug.Log("Done");
+        }
+
+        /// <summary>
+        /// Проверяет, есть ли у указанного трансформа дочерние объекты с заданным тегом.
+        /// </summary>
+        /// <param name="tag">Тег для поиска.</param>
+        /// <param name="transformToCheck">Трансформ, в дочерних объектах которого будет происходить поиск.</param>
+        /// <returns>True, если найден хотя бы один объект с заданным тегом; иначе false.</returns>
+        private bool LeafOff(string tag, Transform transformToCheck)
+        {
+            // Проверяем все дочерние объекты
+            foreach (Transform child in transformToCheck)
+            {
+                // Если найден объект с заданным тегом, возвращаем true
+                if (child.CompareTag(tag))
+                {
+                    return true;
+                }
+            }
+
+            // Если ничего не найдено, возвращаем false
+            return false;
         }
     }
 }

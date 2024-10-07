@@ -28,6 +28,9 @@ namespace GameData
         private InputService _input;
 
         [SerializeField]
+        private DialogueService _dialogue;
+
+        [SerializeField]
         private List<GameObject> _rightBranchesPrefabs;
 
         [SerializeField]
@@ -52,6 +55,7 @@ namespace GameData
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
             ServiceLocator.Register(_groundCheck);
+            ServiceLocator.Register(_dialogue);
             ServiceLocator.Register(new SoundsControlService());
             // ServiceLocator.Register(
             //     new LevelGeneratorService(_leftBranchesPrefabs, _rightBranchesPrefabs, _trunkPrefab)

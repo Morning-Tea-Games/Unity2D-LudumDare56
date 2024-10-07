@@ -82,6 +82,7 @@ namespace Entities
 
             _isFalling = true;
             _soundsControl.PlaySound("RippedLeaf");
+            gameObject.tag = "DoneLeaf";
         }
     }
 }
