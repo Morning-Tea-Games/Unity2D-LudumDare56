@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 7728107075966414202}
+  _dragForce: 2000
 --- !u!70 &7384276587594331640
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -370,6 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1982366463552600024}
+  _dragForce: 2000
 --- !u!70 &327080585110705099
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -866,6 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 4202033071059928238}
+  _dragForce: 2000
 --- !u!70 &4309657799107685377
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1081,6 +1084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 3678794113100292205}
+  _dragForce: 2000
 --- !u!70 &2798349455520399959
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2474,6 +2478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 3765298791551474655}
+  _dragForce: 2000
 --- !u!70 &7074465945405952903
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

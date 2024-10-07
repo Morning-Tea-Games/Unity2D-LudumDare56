@@ -35,7 +35,20 @@ namespace Entities
             transform.position +=
                 _smoothTime * (desiredPosition - transform.position) / 100f * Time.deltaTime;
 
-            _camera.orthographicSize = 5f / (scaleFactor + 5f) * _sizeFactor;
+            _camera.orthographicSize +=
+                _smoothTime
+                * (
+                    Mathf.Clamp(
+                        _sizeFactor / 2f
+                            + Vector3.Distance(transform.position, _input.GlobalMousePosition)
+                                / 100f
+                                * _sizeFactor,
+                        5f,
+                        10f
+                    ) - _camera.orthographicSize
+                )
+                / 50f
+                * Time.deltaTime;
         }
     }
 }
