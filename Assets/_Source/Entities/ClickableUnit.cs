@@ -18,6 +18,9 @@ namespace Entities
         [SerializeField]
         private SpriteRenderer _spriteRenderer;
 
+        [SerializeField]
+        private string _soundName;
+
         private InputService _input;
         private SoundsControlService _soundsControl;
 
@@ -71,7 +74,7 @@ namespace Entities
             _screenFade.DOFade(1f, 1f);
             yield return new WaitForSeconds(1f);
             Destroy(_spriteRenderer);
-            _soundsControl.PlaySound("Meow");
+            _soundsControl.PlaySound(_soundName);
             yield return new WaitForSeconds(1f);
             _screenFade.DOFade(0f, 1f);
             yield return new WaitForSeconds(1f);

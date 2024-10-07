@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using ServiceLocatorSystem;
+using SoundManager;
 using UnityEngine;
 
 namespace Services
@@ -22,6 +23,7 @@ namespace Services
         public AudioSource PlaySound(string key)
         {
             var current = _audioSources[key];
+            //current.volume = DontDestroyMusic.Instance.SoundVolume;
             current.Play();
             return current;
         }

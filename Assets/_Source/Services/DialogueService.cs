@@ -11,9 +11,6 @@ namespace Services
         [SerializeField]
         private TMP_Text _textFixeld;
 
-        [SerializeField]
-        private float _interval;
-
         private Coroutine _coroutine;
 
         private void Awake()
@@ -21,20 +18,22 @@ namespace Services
             _textFixeld.alpha = 0f;
         }
 
-        public void Display(string msg, float fadeDuration)
+        public void Display(string msg, float fadeDuration, float pauseDelay)
         {
             _textFixeld.text = msg;
-            _coroutine = StartCoroutine(AnimateRoutine(fadeDuration));
+            _coroutine = StartCoroutine(AnimateRoutine(fadeDuration, pauseDelay));
         }
 
-        private IEnumerator AnimateRoutine(float fadeDuration)
+        private IEnumerator AnimateRoutine(float fadeDuration, float pauseDelay)
         {
             if (_coroutine != null)
                 yield break;
 
             _textFixeld.DOFade(1f, fadeDuration);
-            yield return new WaitForSeconds(_interval);
+            yield return new WaitForSeconds(fadeDuration);
+            yield return new WaitForSeconds(pauseDelay);
             _textFixeld.DOFade(0f, fadeDuration);
+            yield return new WaitForSeconds(fadeDuration);
             _coroutine = null;
         }
     }
