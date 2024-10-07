@@ -6,6 +6,8 @@ namespace SoundManager
     {
         public static DontDestroyMusic Instance { get; private set; }
 
+        public float SoundVolume = 1f;
+
         private void Awake()
         {
             if (Instance)
