@@ -67,7 +67,7 @@ namespace Entities
 
             if (LeafOff("Leaf", _myBranch))
             {
-                _dialogue.Display(_noTransitionMessage, 2f);
+                _dialogue.Display(_noTransitionMessage, 0.5f, 1f);
                 return;
             }
 

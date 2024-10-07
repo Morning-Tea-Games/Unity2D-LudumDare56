@@ -1,30 +1,28 @@
-using TMPro;
+using GameData;
+using Services;
 using UnityEngine;
 
 namespace Triggers
 {
     public class TextTrigger : MonoBehaviour
     {
-        public TMP_Text _text;
-        public string[] textOptions;
+        [SerializeField]
+        private string[] textOptions;
 
-        void Start()
+        private DialogueService _dialogueService;
+
+        private void Start()
         {
-            _text.gameObject.SetActive(false);
+            _dialogueService = ServiceController_Game.ServiceLocator.GetService<DialogueService>();
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.tag == "Player")
             {
-                _text.gameObject.SetActive(true);
-                _text.text = textOptions[Random.Range(0, textOptions.Length)];
+                var msg = textOptions[Random.Range(0, textOptions.Length)];
+                _dialogueService.Display(msg, 1f, 1f);
             }
-        }
-
-        void OnTriggerExit2D(Collider2D other)
-        {
-            _text.gameObject.SetActive(false);
         }
     }
 }
