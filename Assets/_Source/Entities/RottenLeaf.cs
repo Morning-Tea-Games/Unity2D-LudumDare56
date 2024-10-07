@@ -1,3 +1,4 @@
+using System;
 using GameData;
 using Services;
 using UnityEngine;
@@ -20,15 +21,17 @@ namespace Entities
 
         private InputService _input;
         private PlayerTransformService _playerTransform;
+        private SoundsControlService _soundsControl;
+        private bool _isFalling;
 
         private void Start()
         {
             _input = ServiceController_Game.ServiceLocator.GetService<InputService>();
+            _soundsControl =
+                ServiceController_Game.ServiceLocator.GetService<SoundsControlService>();
             _playerTransform =
                 ServiceController_Game.ServiceLocator.GetService<PlayerTransformService>();
-
             DestroyWhenUsedAllJumps();
-
             _input.OnJump += OnJump;
         }
 
@@ -54,7 +57,8 @@ namespace Entities
         {
             if (_jumps <= 0)
             {
-                Destroy(_hingeJoint2D);
+                Destroy(_hingeJoint2D, 1f);
+                Invoke("OnFall", 1f);
             }
         }
 
@@ -67,6 +71,17 @@ namespace Entities
 
             Gizmos.color = Color.blue;
             Gizmos.DrawWireSphere(transform.position, _activeRadius);
+        }
+
+        private void OnFall()
+        {
+            if (_isFalling)
+            {
+                return;
+            }
+
+            _isFalling = true;
+            _soundsControl.PlaySound("RippedLeaf");
         }
     }
 }

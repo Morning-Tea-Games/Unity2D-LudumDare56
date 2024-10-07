@@ -52,6 +52,7 @@ namespace GameData
             ServiceLocator.Register(_input);
             ServiceLocator.Register(_movement);
             ServiceLocator.Register(_groundCheck);
+            ServiceLocator.Register(new SoundsControlService());
             // ServiceLocator.Register(
             //     new LevelGeneratorService(_leftBranchesPrefabs, _rightBranchesPrefabs, _trunkPrefab)
             // );
