@@ -9,6 +9,9 @@ namespace Triggers
         [SerializeField]
         private string[] textOptions;
 
+        [SerializeField]
+        private bool _endGame;
+
         private DialogueService _dialogueService;
 
         private void Start()
@@ -22,7 +25,17 @@ namespace Triggers
             {
                 var msg = textOptions[Random.Range(0, textOptions.Length)];
                 _dialogueService.Display(msg, 1f, 5f);
+
+                if (_endGame)
+                {
+                    Invoke(nameof(EndGame), 7f);
+                }
             }
+        }
+
+        private void EndGame()
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EndGame");
         }
     }
 }

@@ -557,6 +557,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &59644332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 262399967}
+    m_Modifications:
+    - target: {fileID: 4378178994545631058, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fa480b68bae7df34686db70cdd6f7a76, type: 2}
+    - target: {fileID: 5975796180975679256, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975796180975679256, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -329101894, guid: 5f5f4c699a54f8b4cbcd24ac76e53530, type: 3}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.3231335
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.461028
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284554106411946656, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Name
+      value: Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386088197889191787, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Radius
+      value: 4.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: _endGame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: textOptions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: textOptions.Array.data[0]
+      value: "Builder: Good job mate! All done with this tree! Thanks for helping!
+        Although this is the end for now maybe we\u2019ll add new trees later on,
+        thanks for playing!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: textOptions.Array.data[1]
+      value: 'Gyach: Leaf-cutting can wait, my sandwich can''t.'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 485640b36bc598348babe06237feacf9, type: 3}
+--- !u!4 &59644333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+  m_PrefabInstance: {fileID: 59644332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &85830246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4852999671458064565, guid: 9d900ab7e5325f045afef81a48c6c398, type: 3}
@@ -1536,7 +1632,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8434181091123969015, guid: e7ef85ed6e53eb0419aa94b9846bc242, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 59644333}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7ef85ed6e53eb0419aa94b9846bc242, type: 3}
 --- !u!4 &187281721 stripped
@@ -1922,6 +2021,11 @@ Transform:
   - {fileID: 1861762210}
   m_Father: {fileID: 1882368119}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &262399967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8434181091123969015, guid: e7ef85ed6e53eb0419aa94b9846bc242, type: 3}
+  m_PrefabInstance: {fileID: 187281720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &263541584
 GameObject:
   m_ObjectHideFlags: 0
