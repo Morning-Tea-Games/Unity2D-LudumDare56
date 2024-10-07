@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 313690163208490890}
   - component: {fileID: 8695012768123386254}
   - component: {fileID: 709559696219321784}
-  - component: {fileID: 3342030120211596142}
+  - component: {fileID: 6808398468187877073}
+  - component: {fileID: 4548184238485970039}
   m_Layer: 0
-  m_Name: LeafPaintable
+  m_Name: RottenLeaf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 3, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4247953, g: 0.8113208, b: 0.44118598, a: 1}
+  m_Sprite: {fileID: 238632399, guid: 00d6338bea0832545aff69bc404d305e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,8 +131,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0.49}
-  m_ConnectedAnchor: {x: 0, y: 1.47}
+  m_Anchor: {x: 0.14033216, y: -1.7068894}
+  m_ConnectedAnchor: {x: 0.14033216, y: -1.7068894}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -173,9 +174,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0000001, y: 1.0000001}
+  m_Size: {x: 1.875, y: 3.6875}
   m_Direction: 0
---- !u!114 &3342030120211596142
+--- !u!114 &6808398468187877073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,9 +185,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 673481358383797987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b30160f61084d49a0ae2767cca1252, type: 3}
+  m_Script: {fileID: 11500000, guid: 76d7a46e84789734c97fcfb324bc8ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultColor: {r: 0.42352942, g: 0.8117647, b: 0.44313726, a: 1}
-  _newColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  _spriteRenderer: {fileID: 7975572216918198484}
+  _drawGizmos: 1
+  _jumps: 3
+  _hingeJoint2D: {fileID: 8695012768123386254}
+  _activeRadius: 10
+--- !u!114 &4548184238485970039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673481358383797987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b33cf40f8013d248a7a75fb08521248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minY: -75
