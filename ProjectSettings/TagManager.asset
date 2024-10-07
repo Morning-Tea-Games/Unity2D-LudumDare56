@@ -52,6 +52,9 @@ TagManager:
   - name: Tree
     uniqueID: 1130824423
     locked: 0
+  - name: Moss
+    uniqueID: 1676249955
+    locked: 0
   - name: Tunnel
     uniqueID: 3094893933
     locked: 0
