@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3342030120211596142}
   m_Layer: 0
   m_Name: GreenLeaf
-  m_TagString: Untagged
+  m_TagString: Leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: 500
+  m_BreakForce: 200
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
@@ -187,6 +187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b30160f61084d49a0ae2767cca1252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultColor: {r: 0.42352942, g: 0.8117647, b: 0.44313726, a: 1}
-  _newColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _newColor: {r: 1, g: 1, b: 1, a: 1}
+  _leafSprites:
+  - {fileID: 1317424117, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
+  - {fileID: 1521836983, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
+  - {fileID: -1216977864, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
+  - {fileID: 1427452684, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
+  _frameInterval: 0.2
   _spriteRenderer: {fileID: 7975572216918198484}

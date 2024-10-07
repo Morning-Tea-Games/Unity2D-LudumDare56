@@ -22,6 +22,7 @@ namespace Controllers
             Debug.Log("Cut");
             _playerAnimation.SetState(PlayerStates.Cut); // TODO: не работает
             _soundsControl.PlaySound("CutLeaf");
+            gameObject.tag = "DoneLeaf";
             Destroy(brokenJoint);
         }
     }

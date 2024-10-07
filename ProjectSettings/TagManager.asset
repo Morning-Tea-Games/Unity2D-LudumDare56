@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Leaf
+  - DoneLeaf
   layers:
   - Default
   - TransparentFX
@@ -38,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Back
+    uniqueID: 2075755609
+    locked: 0
+  - name: Background
+    uniqueID: 214841495
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -49,4 +57,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 40250205
+    locked: 0
+  - name: UI
+    uniqueID: 1852672803
     locked: 0

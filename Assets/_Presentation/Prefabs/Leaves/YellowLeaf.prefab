@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6406855113407204715}
   m_Layer: 0
   m_Name: YellowLeaf
-  m_TagString: Untagged
+  m_TagString: Leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: 400
+  m_BreakForce: 100
   m_BreakTorque: Infinity
   m_BreakAction: 1
   m_AutoConfigureConnectedAnchor: 1
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 313690163208490890}
+  _dragForce: 2500
 --- !u!70 &709559696219321784
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
