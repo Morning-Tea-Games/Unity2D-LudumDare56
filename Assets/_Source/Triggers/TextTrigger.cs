@@ -21,7 +21,7 @@ namespace Triggers
             if (other.gameObject.tag == "Player")
             {
                 var msg = textOptions[Random.Range(0, textOptions.Length)];
-                _dialogueService.Display(msg, 1f, 1f);
+                _dialogueService.Display(msg, 1f, 5f);
             }
         }
     }
