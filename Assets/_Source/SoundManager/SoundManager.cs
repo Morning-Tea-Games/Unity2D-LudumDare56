@@ -13,7 +13,7 @@ namespace SoundManager
         {
             _audioSource = DontDestroyMusic.Instance.GetComponent<AudioSource>();
             Slider.value = _audioSource.volume;
-            SoundSlider.value = DontDestroyMusic.Instance.SoundVolume;
+            // SoundSlider.value = DontDestroyMusic.Instance.SoundVolume;
         }
 
         public void SetVolume()
