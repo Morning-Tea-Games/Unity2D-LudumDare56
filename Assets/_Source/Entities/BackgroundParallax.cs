@@ -2,30 +2,33 @@ using GameData;
 using Services;
 using UnityEngine;
 
-public class BackgroundParallax : MonoBehaviour
+namespace Entities
 {
-    [SerializeField]
-    private Transform _fore;
-
-    [SerializeField]
-    private Transform _middle;
-
-    [SerializeField]
-    private Transform _back;
-
-    private Transform _playerTransform;
-
-    private void Start()
+    public class BackgroundParallax : MonoBehaviour
     {
-        _playerTransform = ServiceController_Game
-            .ServiceLocator.GetService<PlayerTransformService>()
-            .GetPlayerTransform();
-    }
+        [SerializeField]
+        private Transform _fore;
 
-    private void Update()
-    {
-        _fore.position = _playerTransform.position / 5f;
-        _middle.position = _playerTransform.position / 15f;
-        _back.position = _playerTransform.position / 25f;
+        [SerializeField]
+        private Transform _middle;
+
+        [SerializeField]
+        private Transform _back;
+
+        private Transform _playerTransform;
+
+        private void Start()
+        {
+            _playerTransform = ServiceController_Game
+                .ServiceLocator.GetService<PlayerTransformService>()
+                .GetPlayerTransform();
+        }
+
+        private void Update()
+        {
+            _fore.position = _playerTransform.position / 5f;
+            _middle.position = _playerTransform.position / 15f;
+            _back.position = _playerTransform.position / 25f;
+        }
     }
 }
