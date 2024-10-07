@@ -643,7 +643,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -8.27, y: -0.37}
-  m_ConnectedAnchor: {x: 4.9279995, y: 1.2840004}
+  m_ConnectedAnchor: {x: 4.927999, y: 1.2840004}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -783,15 +783,15 @@ SpringJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 7410240293762154689}
+  m_ConnectedRigidBody: {fileID: 5588143592555735308}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 7.5228577, y: -0.22477484}
-  m_ConnectedAnchor: {x: 33.80282, y: 8.348314}
+  m_Anchor: {x: 3.477314, y: -1.1837885}
+  m_ConnectedAnchor: {x: 20.330475, y: 11.232373}
   m_AutoConfigureDistance: 1
-  m_Distance: 6.794261
+  m_Distance: 13.8615885
   m_DampingRatio: 0
   m_Frequency: 16
 --- !u!233 &2181665398749761129
@@ -804,13 +804,13 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 7410240293762154689}
+  m_ConnectedRigidBody: {fileID: 5588143592555735308}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -8.27, y: -0.37}
-  m_ConnectedAnchor: {x: 18.069996, y: 1.3891249}
+  m_ConnectedAnchor: {x: 8.25, y: -0.13632889}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -863,19 +863,25 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.44100952, y: 0.7209935}
-      - {x: -4.6659966, y: 0.664989}
+    - - {x: -0.5191498, y: -0.42096263}
+      - {x: -3.2119255, y: -0.44891262}
+      - {x: -5.0549164, y: -0.37782598}
       - {x: -7.692218, y: 0.44402006}
       - {x: -6.9908943, y: -0.12608242}
-      - {x: -7.3375816, y: -0.9519086}
-      - {x: -5.1897736, y: -0.6007929}
-      - {x: -1.4968047, y: -0.5390109}
-      - {x: -0.13223112, y: -0.50300956}
-      - {x: 1.5567398, y: -0.5851741}
-      - {x: 5.388878, y: -0.54727983}
-      - {x: 8.507462, y: -0.6463313}
-      - {x: 8.269588, y: 0.8275075}
-      - {x: 4.2361364, y: 0.7950286}
+      - {x: -7.648716, y: -0.8322403}
+      - {x: -6.5315437, y: -1.1991303}
+      - {x: -5.0542755, y: -1.2380075}
+      - {x: -2.9632416, y: -1.4560498}
+      - {x: -1.4099007, y: -1.3455971}
+      - {x: -0.13558722, y: -1.3424919}
+      - {x: 0.66505206, y: -1.4090631}
+      - {x: 1.3519745, y: -1.3533607}
+      - {x: 3.1028137, y: -1.5489886}
+      - {x: 4.7516365, y: -1.6153607}
+      - {x: 4.244282, y: -0.96750355}
+      - {x: 2.8672523, y: -0.7868454}
+      - {x: 2.4322968, y: -0.70356}
+      - {x: -0.15864658, y: -0.50421757}
   m_UseDelaunayMesh: 0
 --- !u!1 &5792940497712531126
 GameObject:
@@ -1041,6 +1047,7 @@ PolygonCollider2D:
       - {x: 1.5567398, y: -0.5851741}
       - {x: 5.388878, y: -0.54727983}
       - {x: 8.507462, y: -0.6463313}
+      - {x: 9.105392, y: -0.013573458}
       - {x: 8.269588, y: 0.8275075}
       - {x: 4.2361364, y: 0.7950286}
   m_UseDelaunayMesh: 0
