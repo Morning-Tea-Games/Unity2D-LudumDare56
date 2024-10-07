@@ -9,6 +9,10 @@ namespace Entities
     {
         [SerializeField]
         private Rigidbody2D _rigidbody;
+
+        [SerializeField]
+        private float _dragForce = 5f;
+
         private Camera _mainCamera;
 
         private Vector2 _offset;
@@ -43,7 +47,13 @@ namespace Entities
         {
             if (_isDragging)
             {
-                _rigidbody.MovePosition(_input.GlobalMousePosition + (Vector3)_offset);
+                var target =
+                    transform.position
+                    + _dragForce
+                        * (_input.GlobalMousePosition - transform.position)
+                        / 100f
+                        * Time.deltaTime;
+                _rigidbody.MovePosition(target);
                 _rigidbody.velocity = Vector2.zero;
             }
         }
@@ -53,8 +63,7 @@ namespace Entities
             if (IsMouseOver())
             {
                 _isDragging = true;
-                Vector2 mousePosition = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
-                _offset = (Vector2)transform.position - mousePosition;
+                _offset = transform.position - _input.GlobalMousePosition;
             }
         }
 
