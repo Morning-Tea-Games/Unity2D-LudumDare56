@@ -1321,6 +1321,54 @@ PrefabInstance:
       propertyPath: m_BreakForce
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _newColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _newColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _newColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _frameInterval
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _defaultColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _defaultColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _defaultColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _leafSprites.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _leafSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1317424117, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _leafSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 1521836983, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _leafSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -1216977864, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
+    - target: {fileID: 4517076849191505335, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      propertyPath: _leafSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 1427452684, guid: 96c317452d652af4f86774a33628c1bb, type: 3}
     - target: {fileID: 4605961330085904161, guid: 042f16de538c73f459ed83131075d746, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 2.1984425
