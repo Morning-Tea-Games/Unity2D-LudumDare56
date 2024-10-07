@@ -5013,7 +5013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0418\u0433\u0440\u0430\u0442\u044C"
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d9b4507e3c4c874e9379163b31b0af2, type: 2}
   m_sharedMaterial: {fileID: 3042933211469050930, guid: 5d9b4507e3c4c874e9379163b31b0af2, type: 2}
@@ -5439,7 +5439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d9b4507e3c4c874e9379163b31b0af2, type: 2}
   m_sharedMaterial: {fileID: 3042933211469050930, guid: 5d9b4507e3c4c874e9379163b31b0af2, type: 2}
@@ -6120,6 +6120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound
       objectReference: {fileID: 0}
+    - target: {fileID: 4841818500094818470, guid: d5a10d15a42e5cb44a4f4d421319c571, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c3a0d8288c3d72458dab18d42cdd85c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11237,7 +11241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0410\u0432\u0442\u043E\u0440\u044B"
+  m_text: Authors
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d9b4507e3c4c874e9379163b31b0af2, type: 2}
   m_sharedMaterial: {fileID: 3042933211469050930, guid: 5d9b4507e3c4c874e9379163b31b0af2, type: 2}
