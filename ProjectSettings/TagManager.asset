@@ -40,11 +40,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Back
-    uniqueID: 2075755609
-    locked: 0
   - name: Background
     uniqueID: 214841495
+    locked: 0
+  - name: BackgroundBarticles
+    uniqueID: 1419994305
     locked: 0
   - name: Default
     uniqueID: 0
@@ -52,11 +52,17 @@ TagManager:
   - name: Tree
     uniqueID: 1130824423
     locked: 0
+  - name: Tunnel
+    uniqueID: 3094893933
+    locked: 0
   - name: Entity
     uniqueID: 2612677511
     locked: 0
   - name: Player
     uniqueID: 40250205
+    locked: 0
+  - name: Leaves
+    uniqueID: 3161077985
     locked: 0
   - name: UI
     uniqueID: 1852672803
