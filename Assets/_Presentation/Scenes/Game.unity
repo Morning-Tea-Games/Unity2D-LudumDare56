@@ -2432,8 +2432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 106.53}
-  m_SizeDelta: {x: 0, y: 213.06}
+  m_AnchoredPosition: {x: 0.16497803, y: 158.8}
+  m_SizeDelta: {x: -498.33, y: 317.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281798413
 MonoBehaviour:
@@ -2485,9 +2485,9 @@ MonoBehaviour:
   m_fontSize: 52
   m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0
+  m_fontSizeMax: 52
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4415,6 +4415,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4791494062313772175, guid: 042f16de538c73f459ed83131075d746, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1491857713}
     - targetCorrespondingSourceObject: {fileID: 546995509896375496, guid: 042f16de538c73f459ed83131075d746, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1536270155}
@@ -7387,6 +7390,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b6e7b190b32b9744b5bf299a17d562f, type: 3}
+--- !u!4 &996991490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4791494062313772175, guid: 042f16de538c73f459ed83131075d746, type: 3}
+  m_PrefabInstance: {fileID: 513399063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014234970
 GameObject:
   m_ObjectHideFlags: 0
@@ -10003,6 +10011,102 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1491857712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 996991490}
+    m_Modifications:
+    - target: {fileID: 4378178994545631058, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fa480b68bae7df34686db70cdd6f7a76, type: 2}
+    - target: {fileID: 5975796180975679256, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5975796180975679256, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -329101894, guid: 5f5f4c699a54f8b4cbcd24ac76e53530, type: 3}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.823186
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.2335596
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284554106411946656, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Name
+      value: Builder_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386088197889191787, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: m_Radius
+      value: 2.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: _endGame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: textOptions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: textOptions.Array.data[0]
+      value: 'Builder: Hey, laborer. Your job is to maintain the leaves. Green ones
+        - repaint, yellow ones - tear off, and rotten ones will fall off by themselves
+        if you jump. Only the cat''s in the way. He must be chased away'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502444357468050298, guid: 485640b36bc598348babe06237feacf9, type: 3}
+      propertyPath: textOptions.Array.data[1]
+      value: 'Gyach: Leaf-cutting can wait, my sandwich can''t.'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 485640b36bc598348babe06237feacf9, type: 3}
+--- !u!4 &1491857713 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6348316088040798323, guid: 485640b36bc598348babe06237feacf9, type: 3}
+  m_PrefabInstance: {fileID: 1491857712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1495967385
 GameObject:
   m_ObjectHideFlags: 0
