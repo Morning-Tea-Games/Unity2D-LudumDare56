@@ -126,8 +126,8 @@ TextureImporter:
       name: Bee_0
       rect:
         serializedVersion: 2
-        x: 410
-        y: 81
+        x: 12
+        y: 16
         width: 33
         height: 34
       alignment: 0
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5b20c6e583a4074fbfe126fe37334db
-      internalID: 113088553
+      spriteID: a2b4280099388a440b28aba814dc675b
+      internalID: -644873790
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,8 @@ TextureImporter:
       name: Bee_1
       rect:
         serializedVersion: 2
-        x: 456
-        y: 81
+        x: 58
+        y: 16
         width: 33
         height: 34
       alignment: 0
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb7aa7127012f104ebff7f12eb69a9e8
-      internalID: -1097814036
+      spriteID: 946ed3be4bdc505428780458e0e67bef
+      internalID: 2085265613
       vertices: []
       indices: 
       edges: []
@@ -168,8 +168,8 @@ TextureImporter:
       name: Bee_2
       rect:
         serializedVersion: 2
-        x: 504
-        y: 82
+        x: 106
+        y: 17
         width: 33
         height: 34
       alignment: 0
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b2fa6f355ab75149a9217a329ae6e1a
-      internalID: -1329522959
+      spriteID: 5866355e753694544a76ccd1d46d6be4
+      internalID: 262806591
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bee_0: 113088553
-      Bee_1: -1097814036
-      Bee_2: -1329522959
+      Bee_0: -644873790
+      Bee_1: 2085265613
+      Bee_2: 262806591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
